@@ -1,3 +1,12 @@
+# Makefile for aoc25
+# Usage examples:
+#   make            (build release)
+#   make MODE=debug (build debug)
+#   make run        (build then run)
+#   make clean      (remove build artifacts)
+#   make rebuild    (clean then build)
+#   make debug      (convenience target for MODE=debug)
+
 PROJECT      := aoc25
 CXX          ?= g++
 MODE         ?= release
