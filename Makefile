@@ -18,11 +18,13 @@ SRC_DIR      := src
 SOURCES      := main.cpp \
                 $(SRC_DIR)/helpers.cpp \
                 $(SRC_DIR)/one.cpp \
-                $(SRC_DIR)/two.cpp
+                $(SRC_DIR)/two.cpp \
+                $(SRC_DIR)/three.cpp
 OBJECTS      := $(BUILD_DIR)/main.o \
                 $(BUILD_DIR)/helpers.o \
                 $(BUILD_DIR)/one.o \
-                $(BUILD_DIR)/two.o
+                $(BUILD_DIR)/two.o \
+                $(BUILD_DIR)/three.o
 
 CXXFLAGS_COMMON := -std=c++20 -Wall -Wextra -Wpedantic
 CXXFLAGS_DEBUG  := $(CXXFLAGS_COMMON) -Og -g
@@ -64,6 +66,9 @@ $(BUILD_DIR)/one.o: $(SRC_DIR)/one.cpp $(INC_DIR)/one.h | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 $(BUILD_DIR)/two.o: $(SRC_DIR)/two.cpp $(INC_DIR)/two.h | $(BUILD_DIR)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+$(BUILD_DIR)/three.o: $(SRC_DIR)/three.cpp $(INC_DIR)/three.h | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 # Ensure directories exist
