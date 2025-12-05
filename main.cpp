@@ -5,10 +5,11 @@
 #include "include/two.h"
 #include "include/three.h"
 #include "include/four.h"
+#include "include/five.h"
 
 int main(){
     std::string input{};
-    file_parser(input, "inputs/day_four.txt");
+    file_parser(input, "inputs/day_five.txt");
 
     //std::cout << "Day one puzzle one: " << doneqone(input) << std::endl; 
     //std::cout << "Day one puzzle two: " << doneqtwo(input) << std::endl; 
@@ -16,8 +17,8 @@ int main(){
     //std::cout << "Day two puzzle two: " << dtwoqtwo(input) << std::endl; 
     //std::cout << "Day three puzzle one: " << dthreeqone(input) << std::endl; 
     //std::cout << "Day three puzzle two: " << dthreeqtwo(input) << std::endl; 
-    std::cout << "Day four puzzle one: " << dfourqone(input) << std::endl; 
-    std::cout << "Day four puzzle two: " << dfourqtwo(input) << std::endl; 
-
-
+    //std::cout << "Day four puzzle one: " << dfourqone(input) << std::endl; 
+    //std::cout << "Day four puzzle two: " << dfourqtwo(input) << std::endl; 
+    std::cout << "Day five puzzle one: " << dfiveqone(input) << std::endl; 
+    std::cout << "Day five puzzle two: " << dfiveqtwo(input) << std::endl; 
 }
