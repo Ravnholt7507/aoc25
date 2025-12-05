@@ -19,12 +19,14 @@ SOURCES      := main.cpp \
                 $(SRC_DIR)/helpers.cpp \
                 $(SRC_DIR)/one.cpp \
                 $(SRC_DIR)/two.cpp \
-                $(SRC_DIR)/three.cpp
+                $(SRC_DIR)/three.cpp \
+                $(SRC_DIR)/four.cpp
 OBJECTS      := $(BUILD_DIR)/main.o \
                 $(BUILD_DIR)/helpers.o \
                 $(BUILD_DIR)/one.o \
                 $(BUILD_DIR)/two.o \
-                $(BUILD_DIR)/three.o
+                $(BUILD_DIR)/three.o \
+                $(BUILD_DIR)/four.o
 
 CXXFLAGS_COMMON := -std=c++20 -Wall -Wextra -Wpedantic
 CXXFLAGS_DEBUG  := $(CXXFLAGS_COMMON) -Og -g
@@ -69,6 +71,9 @@ $(BUILD_DIR)/two.o: $(SRC_DIR)/two.cpp $(INC_DIR)/two.h | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 $(BUILD_DIR)/three.o: $(SRC_DIR)/three.cpp $(INC_DIR)/three.h | $(BUILD_DIR)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+$(BUILD_DIR)/four.o: $(SRC_DIR)/four.cpp $(INC_DIR)/four.h | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 # Ensure directories exist
